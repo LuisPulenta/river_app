@@ -18,4 +18,8 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
     path: '/stream-provider',
     builder: (context, state) => const StreamScreen(),
   ),
+  GoRoute(
+    path: '/state-notifier-provider',
+    builder: (context, state) => const TodosScreen(),
+  ),
 ]);

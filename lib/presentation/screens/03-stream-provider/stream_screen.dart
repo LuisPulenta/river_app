@@ -16,13 +16,8 @@ class StreamScreen extends ConsumerWidget {
       ),
       body: Center(
           child: randomNames$.when(
-              data: (data) => ListView.builder(
-                    itemCount: data.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return ListTile(
-                        title: Text(data[index]),
-                      );
-                    },
+              data: (data) => Center(
+                    child: Text(data),
                   ),
               error: (error, stackTrace) => Text('Error: $error'),
               loading: () => const CircularProgressIndicator())),
